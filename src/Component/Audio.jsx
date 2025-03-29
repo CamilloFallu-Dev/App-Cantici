@@ -417,7 +417,7 @@ const audioList = [
     artist: "Davide Casà",
     time: "38 minuti",
     info: "Geremia 1:15-60",
-    src: "/public/2023-05-14.mp3", // Assicurati di avere il percorso giusto per i file audio
+    src: "/2023-05-14.mp3", // Assicurati di avere il percorso giusto per i file audio
     text: "Questo è il testo del culto di Marzo...",
   },
   //   {
@@ -439,7 +439,7 @@ const Audio = () => {
   const [currentAudioIndex, setCurrentAudioIndex] = useState(null); // Indice dell'audio in riproduzione
   const [searchTerm, setSearchTerm] = useState(""); // Stato per il termine di ricerca
   const audioRefs = useRef([]); // Array di riferimenti per gli elementi audio
-  const [expandedText, setExpandedText] = useState({}); // Stato per tenere traccia degli audio espansi
+  //   const [expandedText, setExpandedText] = useState({}); // Stato per tenere traccia degli audio espansi
 
   // Funzione per gestire la ricerca
   const handleSearch = (e) => {
