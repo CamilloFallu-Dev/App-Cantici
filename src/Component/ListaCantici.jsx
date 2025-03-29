@@ -178,6 +178,12 @@ export default function ListaCantici() {
     { id: 5, autore: "628", titolo: "Qual Letizia" },
     { id: 6, autore: "90", titolo: "A Pentecoste" },
     { id: 7, autore: "502", titolo: "Gesu' dolce musica" },
+    { id: 8, autore: "215", titolo: "Dio dell'Impossibile" },
+    { id: 9, autore: "508", titolo: "Per Adorarti" },
+    { id: 10, autore: "145", titolo: "Grade sei Tu" },
+    { id: 11, autore: "216", titolo: "Maestà" },
+    { id: 12, autore: "779", titolo: "Il suo nome è Gesu'" },
+    { id: 13, autore: "217", titolo: "Usami" },
   ];
 
   const [cantici, setCantici] = useState(canticiData);

@@ -17,7 +17,6 @@ function App() {
           <Route path="/lista-cantici" element={<ListaCantici />} />
           <Route path="/cantico/:id" element={<Cantico />} />
           <Route path="/audio" element={<Audio />} />
-          {/* <Route path="/contatti" element={<Contatti />} /> */}
         </Routes>
       </div>
     </>

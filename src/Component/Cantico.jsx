@@ -124,6 +124,188 @@ const Cantico = () => {
       testo:
         "Gesu', dolce musica al mio cuor;\nGesu', solo Tu non cambi mai;\nGesu', colt Tuo sangue hai lavato\nil peccato che era dentro me.\n\nGesù, così bello è amare Te;\nGesù, odi sempre il mio pregar;\nGesù, quando cado Tu se lì,\nDolcemente, mi rialzi Tu.\n\nGesù, Tu dal cielo tornerai;\nGesù, la Tua chiesa rapirai;\nGesù, che gran festa allor sarà,\nSempre insieme per l'eternità. (bis)",
     },
+    {
+      id: 8,
+      autore: "215",
+      titolo: "Dio dell'Impossibile",
+      testo:
+        "Quando tutto dice: No\nLa Tua voce mi incoraggia a proseguire\nQuando tutto dice: No\nSembra che il mare non si possa aprire\n\nSo che non sono solo\nE quel che dici su di me\nNon potrà mai cambiar\nRestami accanto oh Dio\nE compi in me la Tua volontà\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\nIl Dio dell'impossibile\n\nQuando tutto dice: No\nLa Tua voce mi incoraggia a proseguire\nQuando tutto dice: No\nSembra che il mare non si possa aprire\n\nSo che non sono solo\nE quel che dici su di me\nNon potrà mai cambiar\nRestami accanto oh Dio\nE compi in me la Tua volontà\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nIl Dio dell'impossibile",
+    },
+    {
+      id: 9,
+      autore: "508",
+      titolo: "Per Adorarti",
+      testo: `Quando vedo la tua santitá
+Quando ammiro la Tua beltà
+Quel ch'è intorno a me diventa ombra
+Nella luce Tua
+
+Quando ho trovato la via al Tuo cuore
+Tu mi hai dato gioia vero, amore
+Ed io scopro la vera ragione
+Per cui io vivo
+
+Per adorarti Signore
+Per adorarti Signore
+La ragione perché io vivo
+Per adorarti Signore
+
+È adorarTí Signor. (bis)`,
+    },
+    {
+      id: 10,
+      autore: "145",
+      titolo: "Grande sei Tu",
+      testo: `O mio Signor!
+Allor che con rispetto
+Io miro il ciel
+Che fece il Tuo voler,
+E lo splendor di stelle
+O sento il tuono.
+E il mondo inter
+Che narra il Tuo poter.
+
+Un canto il cuor
+Innalza a Te, Signor:
+Grande sei Tu!
+Grande sei Tu!
+Un canto il cuor
+Innalza a Te, Signor:
+Grande sei Tu!
+Grande sei Tu!
+
+Allor che vo'
+Vagando su pei monti
+E degli uccel
+Io sento il cinguettar,
+E vedo giù
+Gl'immensi prati verdi,
+E d'un ruscel
+Ascolto il mormorar.
+
+un canto il cuor...
+
+E nel pensar
+Che il Salvator qui in terra
+Venne a soffrir
+Per l'uomo peccator.
+Ch'Egli portò
+Sul Golgota i miei mali
+E che morì
+Per darmi pace e amor.
+
+un canto il cuor...
+
+Quando Gesù
+Ritornerà dal cielo
+E gioia appieno
+Mi darà lassù;
+Mi prostrerò
+Davanti al Suo bel trono
+Per proclamar:
+Signor, grande sei Tu!
+
+un canto il cuor...`,
+    },
+    {
+      id: 11,
+      autore: "216",
+      titolo: "Maestà",
+      testo: `Sono qui
+Umilmente vengo a Te
+Coprimi con la grazia Tua
+Sono qui
+Ero schiavo senza Te
+Tu mi hai dato la libertà
+
+Troverò
+Il vero amore solo in Te
+Perché per primo Tu
+Hai amato me
+
+Maestà, maestà
+Ti dono tutto quello che ho
+Dalle Tue mani vita riceverò
+
+Sono qui
+Il perdono ho avuto in Te
+Perdono anch'io chi mi ferirà
+Resto qui
+So che sei vicino a me
+Il Tuo fuoco mi santificherà
+
+Troverò
+Il vero amore solo in Te
+Perché per primo Tu
+Hai amato me
+
+Maestà, maestà
+Ti dono tutto quello che ho
+Dalle Tue mani vita riceverò
+
+Maestà, maestà
+Per sempre canterò del Tuo amor
+In presenza della Tua Maestà
+Maestà`,
+    },
+    {
+      id: 12,
+      autore: "779",
+      titolo: "Il suo nome è Gesu'",
+      testo: `Se tu cerchi un amico vero
+Il Suo nome è Gesù
+Che stia sempre al tuo fianco davvero
+Non ti lasci mai più
+Se ti senti afflitto e sei rimasto da solo
+E non trovi la forza per andare avanti
+Non aver più paura è il tuo amico Gesù
+
+Se hai bisogno di pace vera
+Puoi trovarla in Gesù
+Apri il cuore e la senti ora
+E non temerai più
+Anche se stai passando per travagli e problemi
+E non vedi ancora una via d'uscita
+Lascia a Lui ogni peso è il tuo amico Gesù
+
+Il suo nome è Gesù
+Solo Lui ti può dare cosa cerca il tuo cuore
+Il Suo nome è Gesù
+Solo in Lui puoi trovare la speranza e l'amore
+È vicino a te
+Egli ti sta parlando credi alle Sue parole
+Il Suo nome è Gesù 
+Puoi invocarLo anche tu 
+
+Puoi amarLo anche tu
+Puoi vederLo anche tu
+Puoi sentirLo anche tu
+Il Suo nome è Gesù`,
+    },
+    {
+      id: 13,
+      autore: "217",
+      titolo: "Usami",
+      testo: `Eccomi, Signor, tu mi conosci
+Cambia questo cuore mio
+Trasformami conforme alla parola
+E riempimi finché si trovi solo te in me
+E poi usami Signor, usami
+
+Come un faro nella notte
+Come ponte sopra l'acqua
+Come ombra nel deserto
+Freccia che va a segno
+Voglio essere usato
+Come piace a te signore
+E in ogni tempo dove andrò
+Io dono a te la vita mia
+Usami Signor, usami
+
+Eccomi, rinnovami
+Trasformami, riempimi 
+E usami.`,
+    },
   ];
 
   useEffect(() => {
@@ -153,7 +335,7 @@ const Cantico = () => {
       <div className="pt-2 text-left">
         <h2 className="text-lg text-left font-bold p-2">{cantico.titolo}</h2>
         <div className="mt-2 text-left pl-2">
-          <p>Numero {cantico.id}</p>
+          <p>Numero {cantico.autore}</p>
         </div>
         <div className="mt-6">
           <div className="p-2 rounded-2xl m-2 bg-neutral-100 shadow-lg">
