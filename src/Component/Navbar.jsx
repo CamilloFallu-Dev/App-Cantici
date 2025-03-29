@@ -47,11 +47,10 @@ export default function Navbar() {
           <p>Lista Cantici</p>
         </Link>
 
-        {/* <Link
+        <Link
           to="/audio"
           className="flex flex-col justify-center items-center text-xs cursor-pointer focus:text-neutral-800"
         >
-      
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -68,7 +67,7 @@ export default function Navbar() {
           </svg>
           <p>Lista Culti</p>
         </Link>
-        <Link
+        {/*<Link
           to="/contatti"
           className="flex flex-col justify-center items-center text-xs cursor-pointer focus:text-neutral-800"
         >

@@ -183,7 +183,7 @@ export default function ListaCantici() {
   const [cantici, setCantici] = useState(canticiData);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1); // State to track the current page
-  const canticiPerPage = 5; // Number of items to display per page
+  const canticiPerPage = 6; // Number of items to display per page
 
   const filterCantici = () => {
     return cantici.filter((cantico) => {
