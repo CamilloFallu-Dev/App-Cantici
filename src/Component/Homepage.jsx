@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "./Footer";
-import Image from "./image";
 import Navbar from "./Navbar";
 export default function Homepage() {
   return (
