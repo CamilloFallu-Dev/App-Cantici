@@ -171,16 +171,13 @@ import Footer from "./Footer";
 
 export default function ListaCantici() {
   const canticiData = [
-    { id: 1, autore: "345", titolo: "Leone della Tribu' di Giuda" },
-    { id: 2, autore: "Autore 2", titolo: "Titolo Cantico 2" },
-    { id: 3, autore: "Autore 3", titolo: "Titolo Cantico 3" },
-    { id: 4, autore: "Autore 4", titolo: "Titolo Cantico 4" },
-    { id: 5, autore: "Autore 5", titolo: "Titolo Cantico 5" },
-    { id: 6, autore: "Autore 6", titolo: "Titolo Cantico 6" },
-    { id: 7, autore: "Autore 7", titolo: "Titolo Cantico 7" },
-    { id: 8, autore: "Autore 8", titolo: "Titolo Cantico 8" },
-    { id: 9, autore: "Autore 9", titolo: "Titolo Cantico 9" },
-    { id: 10, autore: "Autore 10", titolo: "Titolo Cantico 10" },
+    { id: 1, autore: "213", titolo: "Leone della Tribu' di Giuda" },
+    { id: 2, autore: "214", titolo: "Era Lì" },
+    { id: 3, autore: "250", titolo: "In Gesu' trovai l'amico" },
+    { id: 4, autore: "459", titolo: "Camminando sul sentiero" },
+    { id: 5, autore: "628", titolo: "Qual Letizia" },
+    { id: 6, autore: "90", titolo: "A Pentecoste" },
+    { id: 7, autore: "502", titolo: "Gesu' dolce musica" },
   ];
 
   const [cantici, setCantici] = useState(canticiData);
@@ -279,7 +276,7 @@ export default function ListaCantici() {
                 <Link to={`/cantico/${cantico.id}`}>
                   <div className="flex gap-2 font-semibold">
                     <p className="text-neutral-300"> {cantico.autore}</p>
-                    <p className="text-neutral-300">{cantico.id}</p>
+                    {/* <p className="text-neutral-300">{cantico.id}</p> */}
                     <p className="text-neutral-300"> {cantico.titolo}</p>
                   </div>
                 </Link>
