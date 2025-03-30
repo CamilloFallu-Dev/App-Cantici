@@ -171,32 +171,34 @@ import Footer from "./Footer";
 
 export default function ListaCantici() {
   const canticiData = [
-    { id: 1, autore: "213", titolo: "Leone della Tribu' di Giuda" },
-    { id: 2, autore: "214", titolo: "Era Lì" },
+    { id: 1, autore: "900", titolo: "Leone della Tribu' di Giuda" },
+    { id: 2, autore: "901", titolo: "Era Lì" },
     { id: 3, autore: "250", titolo: "In Gesu' trovai l'amico" },
     { id: 4, autore: "459", titolo: "Camminando sul sentiero" },
     { id: 5, autore: "628", titolo: "Qual Letizia" },
     { id: 6, autore: "90", titolo: "A Pentecoste" },
     { id: 7, autore: "502", titolo: "Gesu' dolce musica" },
-    { id: 8, autore: "215", titolo: "Dio dell'Impossibile" },
+    { id: 8, autore: "902", titolo: "Dio dell'Impossibile" },
     { id: 9, autore: "508", titolo: "Per Adorarti" },
-    { id: 10, autore: "145", titolo: "Grade sei Tu" },
-    { id: 11, autore: "216", titolo: "Maestà" },
+    { id: 10, autore: "145", titolo: "Grande sei Tu" },
+    { id: 11, autore: "903", titolo: "Maestà" },
     { id: 12, autore: "779", titolo: "Il suo nome è Gesu'" },
-    { id: 13, autore: "217", titolo: "Usami" },
+    { id: 13, autore: "904", titolo: "Usami" },
+    { id: 14, autore: "1 Raccolta", titolo: "Dio vengo a Te" },
+    { id: 15, autore: "2 Raccolta", titolo: "Mori' per me" },
   ];
 
   const [cantici, setCantici] = useState(canticiData);
   const [search, setSearch] = useState("");
-  const [currentPage, setCurrentPage] = useState(1); // State to track the current page
-  const canticiPerPage = 6; // Number of items to display per page
 
   const filterCantici = () => {
+    const lowerSearch = search.toLowerCase(); // Trasformiamo la ricerca in minuscolo
     return cantici.filter((cantico) => {
+      // Confrontiamo id, autore e titolo, assicurandoci di trattarli come stringhe
       return (
-        cantico.id.toString().includes(search) ||
-        cantico.titolo.toLowerCase().includes(search.toLowerCase()) ||
-        cantico.autore.toString().includes(search) // Trattiamo autore come stringa per il confronto
+        cantico.id.toString().toLowerCase().includes(lowerSearch) || // Confronto ID in minuscolo
+        cantico.titolo.toLowerCase().includes(lowerSearch) || // Confronto Titolo in minuscolo
+        cantico.autore.toString().toLowerCase().includes(lowerSearch) // Confronto Autore in minuscolo
       );
     });
   };
@@ -205,25 +207,10 @@ export default function ListaCantici() {
     setSearch(e.target.value);
   };
 
-  // Paginate filtered cantici
-  const paginateCantici = () => {
-    const filteredCantici = filterCantici();
-    const startIndex = (currentPage - 1) * canticiPerPage;
-    const endIndex = startIndex + canticiPerPage;
-    return filteredCantici.slice(startIndex, endIndex);
-  };
-
-  // Calculate total pages
-  const totalPages = Math.ceil(filterCantici().length / canticiPerPage);
-
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow p-2 bg-white">
+        <p className="p-2">NB: Cerca il cantico per "nome" o per "numero"</p>
         <div className="relative mt-2">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
@@ -247,47 +234,33 @@ export default function ListaCantici() {
             value={search}
             onChange={handleSearchChange}
             placeholder="Cerca il cantico qui..."
-            className="p-3 mb-5 border w-full rounded focus:border-sky-500 placeholder:italic block ps-10"
+            className="p-3 mb-5 border w-full rounded focus:border-neutral-500  placeholder:italic block ps-10"
           />
         </div>
 
-        <div className="p-2 text-lg mb-2 text-left flex gap-2 items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-            />
-          </svg>
-
+        <div className="p-2 text-lg mb-2 text-center items-center">
           <h1>Lista Cantici</h1>
         </div>
         <div>
           <ul
             role="list"
-            className="divide-y divide-neutral-200 shadow-lg rounded-lg p-2 bg-neutral-400"
+            className="divide-y divide-neutral-300 rounded-lg p-2"
           >
-            {paginateCantici().map((cantico) => (
+            {filterCantici().map((cantico) => (
               <li
                 key={cantico.id}
-                className="flex justify-between gap-x-6 py-5 p-1 text-neutral-300"
+                className="flex justify-between items-center gap-x-6 py-5 p-1 text-neutral-500"
               >
                 <Link to={`/cantico/${cantico.id}`}>
-                  <div className="flex gap-2 font-semibold">
-                    <p className="text-neutral-300"> {cantico.autore}</p>
-                    {/* <p className="text-neutral-300">{cantico.id}</p> */}
-                    <p className="text-neutral-300"> {cantico.titolo}</p>
+                  <div className="flex justify-center items-center gap-2 font-semibold">
+                    <p className="text-neutral-800 p-2 rounded-full">
+                      {cantico.autore}
+                    </p>
+                    <p className="text-neutral-500"> {cantico.titolo}</p>
                   </div>
                 </Link>
                 <Link to={`/cantico/${cantico.id}`}>
-                  <span className="flex justify-between">
+                  <span className="flex justify-between items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -307,27 +280,6 @@ export default function ListaCantici() {
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Pagination Controls */}
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="px-2 mx-1 text-white text-sm bg-blue-500 rounded disabled:bg-gray-500"
-          >
-            Pagina pre.
-          </button>
-          <span className="px-2 py-2 mx-1 text-sm">
-            Page {currentPage} of {totalPages}
-          </span>
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="px-2 mx-1 text-white text-sm bg-blue-500 rounded disabled:bg-gray-500"
-          >
-            Pagina succ.
-          </button>
         </div>
       </div>
 

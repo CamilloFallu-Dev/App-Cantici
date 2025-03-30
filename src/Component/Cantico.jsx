@@ -77,14 +77,14 @@ const Cantico = () => {
   const canticiData = [
     {
       id: 1,
-      autore: "213",
+      autore: "900",
       titolo: "Leone della tribu' di Giuda",
       testo:
         "Leone della tribù di Giuda\nHai aperto una porta per me\nE nessuno potrà chiuderla\nPerché tu sei il Re dei Re\n\nLeone della tribù di Giuda\nHai aperto una porta per me\nE nessuno potrà più chiuderla\nPerché tu sei il Re dei Re\n\nEd entrerò\nE la tua gloria vedrò\nEd entrerò\nEd un risveglio avrò\nLa mia vita si incendierà per te\nE brucerò di un amore intenso per te\n(Oh sì per te Gesù)\n\nTu sei un fuoco consumante\nL'unico Dio eterno\nAi tuoi piedi mi prostro tremante\nGridando che sei il mio Re\n\nTu sei un fuoco consumante\nL'unico Dio eterno\nAi tuoi piedi mi prostro tremante\nGridando che sei il mio Re\n\nProclamerò che solo tu sei il Signor\nAdorerò baciando i piedi tuoi\nLa mia vita si incendierà per te\nE brucerò di un amore intenso per te\n(Halleluia)\n\nLeone della tribù di Giuda\nHai aperto una porta per me\nE nessuno potrà più chiuderla\nPerché tu sei il Re dei Re\n\nEd entrerò\nE la tua gloria vedrò\nEd entrerò\nEd un risveglio avrò\nLa mia vita si incendierà per te (ooh)\nLa mia vita si incendierà per te\nLa mia vita si incendierà per te\nE brucerò, e brucerò, e brucerò\nE brucerò, e brucerò, e brucerò\nE brucerò di un amore intenso per te\n\nOoh brucerò, brucerò\nBrucerò da te Gesù\nHalleluia, halleluia\nLeone della tribù di Giuda",
     },
     {
       id: 2,
-      autore: "214",
+      autore: "901",
       titolo: "Era Lì",
       testo:
         "Era lì, per pagare il prezzo dei miei peccati\nMentre tutti ridevan di Lui\n\nEra lì, quando il sangue scendeva\nDalla Sua fronte\nEra lì, mentre il sangue di Abele\nGridava vendetta\nIl Suo sangue grida amore\n\nGesù era lì, che soffriva con amore\nEra lì, non pensava al Suo dolore\nGesù era lì, con lo sguardo verso il cielo\nPadre mio\n\nEra lì, sofferente in croce\nCon amore pregava, era lì\nPadre mio perdona loro\nPerché non sanno quel che essi fanno\n\nUna sola espressione uscì dal Suo cuore\nPadre mio tutto è compiuto\n\nGesù era lì, che soffriva con amore\nEra lì, non pensava al Suo dolore\nGesù era lì, con lo sguardo verso il cielo\nPadre mio\n\nGesù era lì, che soffriva con amore\nEra lì, non pensava al Suo dolore\nGesù era lì, con lo sguardo verso il cielo\nPadre mio",
@@ -126,7 +126,7 @@ const Cantico = () => {
     },
     {
       id: 8,
-      autore: "215",
+      autore: "902",
       titolo: "Dio dell'Impossibile",
       testo:
         "Quando tutto dice: No\nLa Tua voce mi incoraggia a proseguire\nQuando tutto dice: No\nSembra che il mare non si possa aprire\n\nSo che non sono solo\nE quel che dici su di me\nNon potrà mai cambiar\nRestami accanto oh Dio\nE compi in me la Tua volontà\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\nIl Dio dell'impossibile\n\nQuando tutto dice: No\nLa Tua voce mi incoraggia a proseguire\nQuando tutto dice: No\nSembra che il mare non si possa aprire\n\nSo che non sono solo\nE quel che dici su di me\nNon potrà mai cambiar\nRestami accanto oh Dio\nE compi in me la Tua volontà\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nLui non rinuncia a me\nLa Sua destra mi sostiene\nE mi fa vincere\n\nIl Dio dell'impossibile\nIl Dio dell'impossibile",
@@ -209,7 +209,7 @@ un canto il cuor...`,
     },
     {
       id: 11,
-      autore: "216",
+      autore: "903",
       titolo: "Maestà",
       testo: `Sono qui
 Umilmente vengo a Te
@@ -284,7 +284,7 @@ Il Suo nome è Gesù`,
     },
     {
       id: 13,
-      autore: "217",
+      autore: "904",
       titolo: "Usami",
       testo: `Eccomi, Signor, tu mi conosci
 Cambia questo cuore mio
@@ -305,6 +305,50 @@ Usami Signor, usami
 Eccomi, rinnovami
 Trasformami, riempimi 
 E usami.`,
+    },
+    {
+      id: 14,
+      autore: "1 Raccolta",
+      titolo: "Dio vengo a Te",
+      testo: `Dio vengo a te 
+Mi presento al tuo trono così
+Tutto ciò che mi agita lo lascio qui
+
+Dio vengo a Te
+il mio cuore lo spando ai tuoi piè
+Togli tutto ciò che mi separa da Te
+
+Coro: Le mie ansie non ti son nascoste
+Tu hai cura di Me
+Fiducioso lo sguardo a te volgo
+e mi infondo su Te
+
+Dammi un nuovo cuor 
+Tutto per Te
+Metti un nuovo canto dentro Me
+
+Riempimi col tuo Spirito
+Sei Tu
+La Lode del mio cuor`,
+    },
+    {
+      id: 15,
+      autore: "2 Raccolta",
+      titolo: "Mori' per me",
+      testo: `Morì per me, morì per me
+Gesù, Gesù, morì per me.
+
+Risuscitò, risuscitò
+Gesù, Gesù, risuscitò.
+
+Ei vive in me, Ei vive in me
+Gesù, Gesù, Ei vive in me.
+
+Ritornerà, ritornerà
+Gesù, Gesù, ritornerà.
+
+Alleluia, Alleluia
+Gesù, Gesù, Alleluia.`,
     },
   ];
 
@@ -331,19 +375,23 @@ E usami.`,
   };
 
   return (
-    <div className="bg-neutral-300">
-      <div className="pt-2 text-left">
-        <h2 className="text-lg text-left font-bold p-2">{cantico.titolo}</h2>
-        <div className="mt-2 text-left pl-2">
+    <div className="min-h-screen flex flex-col items-center justify-start">
+      <div className="p-6 text-left max-w-4xl w-full mx-auto">
+        <h2 className="text-2xl font-extrabold text-neutral-700 mb-4">
+          {cantico.titolo}
+        </h2>
+        {/* <div className="mt-2 text-left pl-2">
           <p>Numero {cantico.autore}</p>
-        </div>
+        </div> */}
         <div className="mt-6">
-          <div className="p-2 rounded-2xl m-2 bg-neutral-100 shadow-lg">
+          <div className="p-4 bg-neutral-300 bg-opacity-80 shadow-lg rounded-xl">
             {formatTesto(cantico.testo)}
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="w-full">
+        <Footer />
+      </div>
     </div>
   );
 };
