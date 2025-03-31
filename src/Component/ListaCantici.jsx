@@ -165,7 +165,7 @@
 //     </div>
 //   );
 // }
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
@@ -186,19 +186,36 @@ export default function ListaCantici() {
     { id: 13, autore: "904", titolo: "Usami" },
     { id: 14, autore: "1 Raccolta", titolo: "Dio vengo a Te" },
     { id: 15, autore: "2 Raccolta", titolo: "Mori' per me" },
+    { id: 16, autore: "3 Raccolta", titolo: "Davanti Al tuo Trono" },
   ];
 
   const [cantici, setCantici] = useState(canticiData);
   const [search, setSearch] = useState("");
+  const [sortOrder, setSortOrder] = useState(null); // Stato per l'ordinamento
+  const [preferiti, setPreferiti] = useState([]); // Stato per i preferiti
+  const [showPreferiti, setShowPreferiti] = useState(false); // Stato per visualizzare i preferiti
 
-  const filterCantici = () => {
+  useEffect(() => {
+    // Carica i preferiti dal localStorage se presenti
+    const savedPreferiti = JSON.parse(localStorage.getItem("preferiti"));
+    if (savedPreferiti) {
+      setPreferiti(savedPreferiti);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Salva i preferiti nel localStorage ogni volta che cambiano
+    localStorage.setItem("preferiti", JSON.stringify(preferiti));
+  }, [preferiti]);
+
+  const filterCantici = (canticiToFilter) => {
     const lowerSearch = search.toLowerCase(); // Trasformiamo la ricerca in minuscolo
-    return cantici.filter((cantico) => {
+    return canticiToFilter.filter((cantico) => {
       // Confrontiamo id, autore e titolo, assicurandoci di trattarli come stringhe
       return (
-        cantico.id.toString().toLowerCase().includes(lowerSearch) || // Confronto ID in minuscolo
-        cantico.titolo.toLowerCase().includes(lowerSearch) || // Confronto Titolo in minuscolo
-        cantico.autore.toString().toLowerCase().includes(lowerSearch) // Confronto Autore in minuscolo
+        cantico.id.toString().toLowerCase().includes(lowerSearch) ||
+        cantico.titolo.toLowerCase().includes(lowerSearch) ||
+        cantico.autore.toString().toLowerCase().includes(lowerSearch)
       );
     });
   };
@@ -206,6 +223,54 @@ export default function ListaCantici() {
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
   };
+
+  const handleSort = (order) => {
+    setSortOrder(order); // Imposta l'ordine di ordinamento
+  };
+
+  const togglePreferito = (cantico) => {
+    setPreferiti((prevPreferiti) => {
+      if (prevPreferiti.some((item) => item.id === cantico.id)) {
+        // Se il cantico è già nei preferiti, lo rimuoviamo
+        return prevPreferiti.filter((item) => item.id !== cantico.id);
+      } else {
+        // Se il cantico non è nei preferiti, lo aggiungiamo
+        return [...prevPreferiti, cantico];
+      }
+    });
+  };
+
+  const handleShowPreferiti = () => {
+    setShowPreferiti((prevState) => !prevState);
+  };
+
+  const sortCantici = (canticiToSort) => {
+    if (sortOrder === "alphabetical") {
+      return canticiToSort.sort((a, b) => a.titolo.localeCompare(b.titolo)); // Ordina alfabeticamente
+    }
+    if (sortOrder === "asc") {
+      // Ordina in ordine crescente per autore (convertito a numero)
+      return canticiToSort.sort((a, b) => {
+        const autoreA = isNaN(a.autore) ? a.autore : Number(a.autore); // Converte in numero
+        const autoreB = isNaN(b.autore) ? b.autore : Number(b.autore); // Converte in numero
+        return autoreA - autoreB; // Ordina in ordine crescente
+      });
+    }
+    if (sortOrder === "desc") {
+      // Ordina in ordine decrescente per autore (convertito a numero)
+      return canticiToSort.sort((a, b) => {
+        const autoreA = isNaN(a.autore) ? a.autore : Number(a.autore); // Converte in numero
+        const autoreB = isNaN(b.autore) ? b.autore : Number(b.autore); // Converte in numero
+        return autoreB - autoreA; // Ordina in ordine decrescente
+      });
+    }
+
+    return canticiToSort;
+  };
+
+  const displayedCantici = showPreferiti ? preferiti : cantici;
+  const filteredCantici = filterCantici(displayedCantici);
+  const sortedCantici = sortCantici(filteredCantici);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -241,24 +306,127 @@ export default function ListaCantici() {
         <div className="p-2 text-lg mb-2 text-center items-center">
           <h1>Lista Cantici</h1>
         </div>
+
+        {/* Aggiungi i bottoni per il filtraggio */}
+        <div className="flex gap-4 mb-5 justify-center">
+          <button
+            onClick={() => handleSort("alphabetical")}
+            className="text-neutral-900 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinejoin="round"
+                d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={() => handleSort("asc")}
+            className="text-neutral-900 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={() => handleSort("desc")}
+            className="text-neutral-900 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={handleShowPreferiti}
+            className="text-neutral-900 text-sm rounded"
+          >
+            {showPreferiti ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="red"
+                className="size-6"
+              >
+                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-6"
+              >
+                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+              </svg>
+            )}
+          </button>
+        </div>
+
         <div>
           <ul
             role="list"
             className="divide-y divide-neutral-300 rounded-lg p-2"
           >
-            {filterCantici().map((cantico) => (
+            {sortedCantici.map((cantico) => (
               <li
                 key={cantico.id}
                 className="flex justify-between items-center gap-x-6 py-5 p-1 text-neutral-500"
               >
-                <Link to={`/cantico/${cantico.id}`}>
-                  <div className="flex justify-center items-center gap-2 font-semibold">
-                    <p className="text-neutral-800 p-2 rounded-full">
-                      {cantico.autore}
-                    </p>
-                    <p className="text-neutral-500"> {cantico.titolo}</p>
-                  </div>
-                </Link>
+                <div className="flex items-center gap-2">
+                  {/* Icona del cuore per aggiungere ai preferiti */}
+
+                  <svg
+                    onClick={() => togglePreferito(cantico)}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill={
+                      preferiti.some((item) => item.id === cantico.id)
+                        ? "red"
+                        : "gray"
+                    }
+                    className="size-6"
+                  >
+                    <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                  </svg>
+
+                  <Link to={`/cantico/${cantico.id}`}>
+                    <div className="flex justify-center items-center gap-2 font-semibold">
+                      <p className="text-neutral-800 p-2 rounded-full">
+                        {cantico.autore}
+                      </p>
+                      <p className="text-neutral-500"> {cantico.titolo}</p>
+                    </div>
+                  </Link>
+                </div>
                 <Link to={`/cantico/${cantico.id}`}>
                   <span className="flex justify-between items-center">
                     <svg

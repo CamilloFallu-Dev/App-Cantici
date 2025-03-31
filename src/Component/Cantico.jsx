@@ -350,6 +350,46 @@ Gesù, Gesù, ritornerà.
 Alleluia, Alleluia
 Gesù, Gesù, Alleluia.`,
     },
+    {
+      id: 16,
+      autore: "3 Raccolta",
+      titolo: "Davanti Al tuo Trono",
+      testo: `Davanti al Tuo trono
+Mi presento Signor
+Nonostante i miei limiti
+E la pena del mio cuor
+
+La Tua mano è stesa su di me
+E del bene mi farà
+E per questo che Ti chiedo
+Accarezza il mio cuor
+
+Davanti al Tuo trono
+Mi presento Signor
+Nonostante i miei limiti
+E la pena del mio cuor
+
+La Tua mano è stesa su di me
+E del bene mi farà
+E per questo che Ti chiedo
+Accarezza il mio cuor
+
+Davanti al Tuo trono
+Mi presento Signor
+Nonostante i miei limiti
+E la pena del mio cuor
+
+La Tua mano è stesa su di me
+E del bene mi farà
+E per questo che Ti chiedo
+Accarezza il mio cuor
+
+E per questo che Ti chiedo
+Accarezza il mio cuor
+
+E per questo che Ti chiedo
+Accarezza il mio cuor`,
+    },
   ];
 
   useEffect(() => {
@@ -369,7 +409,9 @@ Gesù, Gesù, Alleluia.`,
         {strofa.split("\n").map((riga, rigaIndex) => (
           <p key={rigaIndex}>{riga}</p>
         ))}
-        {index < strofe.length - 1 && <p className="text-left">-</p>}
+        {index < strofe.length - 1 && (
+          <p className="text-left text-neutral-300">-</p>
+        )}
       </div>
     ));
   };
