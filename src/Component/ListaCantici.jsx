@@ -184,9 +184,15 @@ export default function ListaCantici() {
     { id: 11, autore: "903", titolo: "Maestà" },
     { id: 12, autore: "779", titolo: "Il suo nome è Gesu'" },
     { id: 13, autore: "904", titolo: "Usami" },
-    { id: 14, autore: "1 Raccolta", titolo: "Dio vengo a Te" },
-    { id: 15, autore: "2 Raccolta", titolo: "Mori' per me" },
-    { id: 16, autore: "3 Raccolta", titolo: "Davanti Al tuo Trono" },
+    // { id: 14, autore: "1 Raccolta", titolo: "Dio vengo a Te" },
+    // { id: 15, autore: "2 Raccolta", titolo: "Mori' per me" },
+    // { id: 16, autore: "3 Raccolta", titolo: "Davanti Al tuo Trono" },
+    // { id: 17, autore: "4 Raccolta", titolo: "Salmo 92" },
+    // { id: 18, autore: "5 Raccolta", titolo: "Degno sei D'onore" },
+    // { id: 19, autore: "6 Raccolta", titolo: "Lodino gli Angeli" },
+    // { id: 20, autore: "7 Raccolta", titolo: "Sei Signor prezioso" },
+    // { id: 21, autore: "8 Raccolta", titolo: "Solo per la Grazia" },
+    // { id: 22, autore: "9 Raccolta", titolo: "Tua Maestà" },
   ];
 
   const [cantici, setCantici] = useState(canticiData);
@@ -274,7 +280,7 @@ export default function ListaCantici() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="flex-grow p-2 bg-white">
+      <div className="flex-grow p-2 bg-lime-950/15">
         <p className="p-2">NB: Cerca il cantico per "nome" o per "numero"</p>
         <div className="relative mt-2">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">

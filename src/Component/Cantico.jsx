@@ -390,6 +390,193 @@ Accarezza il mio cuor
 E per questo che Ti chiedo
 Accarezza il mio cuor`,
     },
+    {
+      id: 17,
+      autore: "4 Raccolta",
+      titolo: "Salmo 92",
+      testo: `E' buono celebrare il nostro Re
+Salmeggiare all’ Altissimo
+Proclamare la mattina la Tua benignità
+E la sera la Tua fedeltà.
+
+Al suono del saltéro e dell’arpa
+Io canto giubilando in Te
+Perché Tu oh Signor mi rallegri il cuor
+Per le opere grandi che Tu fai.`,
+    },
+    {
+      id: 18,
+      autore: "5 Raccolta",
+      titolo: "Degno sei D'onore",
+      testo: `Degno sei d’onore,
+T’adoriam, Gesù,
+Noi alziam le nostre mani,
+Noi innalziamo il nome Tuo.
+Degno sei d’onore,
+T’adoriam, Gesù,
+Noi alziam le nostre mani,
+Noi innalziamo il nome Tuo.
+
+Grande sei Tu, grandi miracoli Tu fai,
+Nessun altro è come Te,
+Nessun altro è come Te.
+Grande sei Tu, grandi miracoli Tu fai,
+Nessun altro è come Te,
+Nessun altro è come Te.
+
+Finale:
+Grande sei TU`,
+    },
+    {
+      id: 19,
+      autore: "6 Raccolta",
+      titolo: "Lodino gli Angeli",
+      testo: `Lodino gli angeli, lodino il ciel,
+Ogni creatura celeste lassù,
+Tutto lodi Dio.
+
+Lodino gli angeli, lodino il ciel,
+Ogni creatura celeste lassù,
+Tutto lodi Dio.
+
+Grande in forza, grande in gloria
+Grande in grazia, Re del cielo...
+In battaglia, in prodigi
+Grande in Sion
+È della terra il Re...
+
+Lodino gli astri lucenti del ciel,
+Lodino il mare e la terra quaggiù,
+Tutto lodi Dio.
+
+Grande in forza, grande in gloria
+Grande in grazia, Re del cielo...
+In battaglia, in prodigi
+Grande in Sion
+
+È della terra il Re...
+Grande in forza, grande in gloria
+Grande in grazia, Re del cielo...
+In battaglia, in prodigi
+Grande in Sion
+È della terra il Re...`,
+    },
+    {
+      id: 20,
+      autore: "7 Raccolta",
+      titolo: "Sei Signor prezioso",
+      testo: `Sei Signor, prezioso per me
+Sei Signor, prezioso per me
+ 
+
+E ti amo, si ti amo,
+Perchè tu primo amasti me!
+ 
+
+Sei Signor, benigno per me
+Sei Signor, benigno per me
+ 
+
+E ti amo, si ti amo,
+Perchè tu primo amasti me!
+ 
+
+Sei Signor, fedele per me
+Sei Signor, fedele per me
+
+
+E ti amo, si ti amo,
+Perchè tu primo amasti me!`,
+    },
+    {
+      id: 21,
+      autore: "8 Raccolta",
+      titolo: "Solo per la Grazia",
+      testo: `Solo per grazia possiamo
+Venire al tuo trono, Signor
+Non è per quel che facciamo
+E' per il tuo sangue Gesù.
+Alla tua dolce presenza
+Ci chiami, Signor
+Per la tua grazia ora entriamo
+Veniamo davanti a te
+Veniamo davanti a te.
+
+Se i miei peccati guardassi Tu, Signor
+Non potrei mai presentarmi davanti al tuo tron
+Soltanto per la tua grazia io vengo a te
+Tu mi hai lavato col sangue dell'Agnel.
+
+Solo per grazia possiamo
+Venire al tuo trono, Signor
+Non è per quel che facciamo
+E' per il tuo sangue Gesù.
+Alla tua dolce presenza
+Ci chiami, Signor
+Per la tua grazia ora entriamo
+Veniamo davanti a te
+Veniamo davanti a te.
+
+Se i miei peccati guardassi Tu, Signor
+Non potrei mai presentarmi davanti al tuo tron
+Soltanto per la tua grazia io vengo a te
+Tu mi hai lavato col sangue dell'Agnel.
+
+Solo per grazia possiamo
+Venire al tuo trono, Signor
+Non è per quel che facciamo
+E' per il tuo sangue Gesù.
+Alla tua dolce presenza
+Ci chiami, Signor
+Per la tua grazia ora entriamo
+Veniamo davanti a te
+Veniamo davanti a te.
+Veniamo davanti a te.
+Veniamo davanti a te.`,
+    },
+    {
+      id: 22,
+      autore: "9 Raccolta",
+      titolo: "Tua Maestà",
+      testo: `Re dei re, Maestà,
+Dio del ciel, vivente in me
+Caro Salvator, amico ver
+Mio liberator, tutto Tu sei
+Tutto di me si prostra al Tuo tron
+
+Tua Maestà, noi adoriam
+Noi ci prostriam davanti a Te
+Vesti reali non meritiam
+Viviamo per servirTi, o Re!
+
+La terra e il ciel adoran Te
+Eterno amor, Tu sei il fedel
+Ci hai fatti sacerdoti e re
+Portando peccatori al trono Tuo
+Tutto di me grida lode a Te
+
+Tua Maestà, noi adoriam
+Noi ci prostriam davanti a Te
+Vesti reali non meritiam
+Viviamo per servirTi, o Re!
+
+Tua Maestà, noi adoriam
+Noi ci prostriam davanti a Te
+Vesti reali non meritiam
+Viviamo per servirTi, o Re!
+
+Tua Maestà, noi adoriam
+Noi ci prostriam davanti a Te
+Vesti reali non meritiam
+Viviamo per servirTi, o Re!
+
+Tua Maestà, noi adoriam
+Noi ci prostriam davanti a Te
+Vesti reali non meritiam
+Viviamo per servirTi, o Re!
+Viviamo per servirTi, o Re!
+Viviamo per servirTi, o Re!`,
+    },
   ];
 
   useEffect(() => {
