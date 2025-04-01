@@ -992,7 +992,7 @@ Dal cielo su noi scenderà`,
           {cantico.titolo}
         </h2>
         <div className="mt-6">
-          <div className="p-4 bg-neutral-300 bg-opacity-80 shadow-lg rounded-xl">
+          <div className="p-4 bg-lime-950/25 bg-opacity-80 shadow-lg rounded-xl">
             {formatTesto(cantico.testo)}
           </div>
         </div>
