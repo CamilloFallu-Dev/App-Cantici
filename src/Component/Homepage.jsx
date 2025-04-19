@@ -17,7 +17,7 @@ export default function Homepage() {
       </div>
 
       {/* <Image /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

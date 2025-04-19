@@ -997,9 +997,9 @@ Dal cielo su noi scenderà`,
           </div>
         </div>
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };

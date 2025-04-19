@@ -83,7 +83,7 @@ export default function Contatti() {
           </button>
         </div>
       </form>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

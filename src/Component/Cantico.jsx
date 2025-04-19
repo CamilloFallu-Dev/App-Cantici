@@ -537,7 +537,7 @@ Viviamo per servirTi, o Re!`,
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start">
+    <div className="min-h-screen flex flex-col items-center justify-start mb-15">
       <div className="p-6 text-left max-w-4xl w-full mx-auto">
         <h2 className="text-2xl font-extrabold text-neutral-700 mb-4">
           {cantico.titolo}
@@ -548,9 +548,9 @@ Viviamo per servirTi, o Re!`,
           </div>
         </div>
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -37,7 +37,7 @@ const raccolta = [
 
 export default function Raccolta() {
   return (
-    <div className="bg-lime-950/15">
+    <div className="bg-lime-950/15 mb-18">
       <h1 className="text-center p-2">Elenco Canti della Raccolta di Licata</h1>
       <ul role="list" className="divide-y divide-neutral-300  rounded-lg p-2">
         {raccolta.map((item) => (
