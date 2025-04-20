@@ -987,8 +987,8 @@ Dal cielo su noi scenderà`,
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start">
-      <div className="p-6 text-left max-w-4xl w-full mx-auto">
-        <h2 className="text-2xl font-extrabold text-neutral-700 mb-4">
+      <div className="p-6 text-left max-w-4xl w-full mx-auto mb-50">
+        <h2 className="text-2xl font-extrabold text-neutral-700 mb-4 text-center">
           {cantico.titolo}
         </h2>
         <div className="mt-6">

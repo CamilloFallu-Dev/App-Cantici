@@ -4,19 +4,34 @@ import Footer from "./Footer";
 
 export default function ListaCantici() {
   const canticiData = [
-    { id: 1, autore: "900", titolo: "Leone della Tribu' di Giuda" },
-    { id: 2, autore: "901", titolo: "Era Lì" },
-    { id: 3, autore: "250", titolo: "In Gesu' trovai l'amico" },
-    { id: 4, autore: "459", titolo: "Camminando sul sentiero" },
-    { id: 5, autore: "628", titolo: "Qual Letizia" },
-    { id: 6, autore: "90", titolo: "A Pentecoste" },
-    { id: 7, autore: "502", titolo: "Gesu' dolce musica" },
-    { id: 8, autore: "902", titolo: "Dio dell'Impossibile" },
-    { id: 9, autore: "508", titolo: "Per Adorarti" },
-    { id: 10, autore: "145", titolo: "Grande sei Tu" },
-    { id: 11, autore: "903", titolo: "Maestà" },
-    { id: 12, autore: "779", titolo: "Il suo nome è Gesu'" },
-    { id: 13, autore: "904", titolo: "Usami" },
+    { id: 1, autore: "1", titolo: "Siamo per grazia" },
+    { id: 2, autore: "2", titolo: "Onoriamo la parola" },
+    { id: 3, autore: "3", titolo: "Eccoci nel tuo cospetto" },
+    { id: 4, autore: "4", titolo: "Eccoci nel tuo cospetto" },
+    { id: 5, autore: "5", titolo: "Eccoci nel tuo cospetto" },
+    { id: 6, autore: "6", titolo: "Siamo per grazia" },
+    { id: 7, autore: "7", titolo: "Onoriamo la parola" },
+    { id: 8, autore: "8", titolo: "Eccoci nel tuo cospetto" },
+    { id: 9, autore: "9", titolo: "Eccoci nel tuo cospetto" },
+    { id: 10, autore: "10", titolo: "Eccoci nel tuo cospetto" },
+    { id: 11, autore: "11", titolo: "Siamo per grazia" },
+    { id: 12, autore: "12", titolo: "Onoriamo la parola" },
+    { id: 13, autore: "13", titolo: "Eccoci nel tuo cospetto" },
+    { id: 14, autore: "14", titolo: "Eccoci nel tuo cospetto" },
+    { id: 15, autore: "15", titolo: "Eccoci nel tuo cospetto" },
+    // { id: 1, autore: "900", titolo: "Leone della Tribu' di Giuda" },
+    // { id: 2, autore: "901", titolo: "Era Lì" },
+    // { id: 3, autore: "250", titolo: "In Gesu' trovai l'amico" },
+    // { id: 4, autore: "459", titolo: "Camminando sul sentiero" },
+    // { id: 5, autore: "628", titolo: "Qual Letizia" },
+    // { id: 6, autore: "90", titolo: "A Pentecoste" },
+    // { id: 7, autore: "502", titolo: "Gesu' dolce musica" },
+    // { id: 8, autore: "902", titolo: "Dio dell'Impossibile" },
+    // { id: 9, autore: "508", titolo: "Per Adorarti" },
+    // { id: 10, autore: "145", titolo: "Grande sei Tu" },
+    // { id: 11, autore: "903", titolo: "Maestà" },
+    // { id: 12, autore: "779", titolo: "Il suo nome è Gesu'" },
+    // { id: 13, autore: "904", titolo: "Usami" },
     // { id: 14, autore: "1 Raccolta", titolo: "Dio vengo a Te" },
     // { id: 15, autore: "2 Raccolta", titolo: "Mori' per me" },
     // { id: 16, autore: "3 Raccolta", titolo: "Davanti Al tuo Trono" },
@@ -114,10 +129,12 @@ export default function ListaCantici() {
   return (
     <div className="flex flex-col min-h-screen mb-18">
       <div className="flex-grow p-2 bg-lime-950/15">
-        <div className="p-2 text-lg mb-2 text-center items-center flex justify-center gap-2">
-          <h1>Lista Cantici</h1>
+        <div className="p-2 text-lg mb-2 text-center items-center flex justify-center">
+          <h1 className="text-xl text-center font-extrabold text-neutral-700 p-4">
+            Lista Cantici
+          </h1>
 
-          <button
+          {/* <button
             onClick={handleShowPreferiti}
             className="text-neutral-900 text-sm rounded"
           >
@@ -140,7 +157,7 @@ export default function ListaCantici() {
                 <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
               </svg>
             )}
-          </button>
+          </button> */}
         </div>
 
         <div className="relative mt-2 mb-2">
@@ -166,24 +183,21 @@ export default function ListaCantici() {
             value={search}
             onChange={handleSearchChange}
             placeholder="Cerca il cantico qui..."
-            className="p-1.5 w-full rounded-xl bg-white block ps-10 inset-shadow-sm"
+            className="p-1.5 w-full rounded-full bg-white block ps-10 inset-shadow-sm"
           />
         </div>
 
         <div>
-          <ul
-            role="list"
-            className="divide-y divide-neutral-300 rounded-lg p-2"
-          >
+          <ul role="list" className=" rounded-lg p-2 grid grid-cols-5">
             {sortedCantici.map((cantico) => (
               <li
                 key={cantico.id}
-                className="flex justify-between items-center gap-x-6 py-3 p-1 text-neutral-500"
+                className=" gap-x-6 py-3 p-1 text-neutral-500 text-center"
               >
-                <div className="flex items-center gap-2">
-                  {/* Icona del cuore per aggiungere ai preferiti */}
+                {/* <div className="grid grid-cols-3"> */}
+                {/* Icona del cuore per aggiungere ai preferiti */}
 
-                  <svg
+                {/*<svg
                     onClick={() => togglePreferito(cantico)}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -192,21 +206,23 @@ export default function ListaCantici() {
                         ? "maroon"
                         : "gray"
                     }
-                    className="size-6"
+                    className="size-4"
                   >
                     <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                  </svg>
+                  </svg>*/}
 
-                  <Link to={`/cantico/${cantico.id}`}>
-                    <div className="flex justify-center items-center gap-2 font-semibold">
-                      <p className="text-neutral-800 p-2 rounded-full">
-                        {cantico.autore}
-                      </p>
-                      <p className="text-neutral-500"> {cantico.titolo}</p>
-                    </div>
-                  </Link>
-                </div>
                 <Link to={`/cantico/${cantico.id}`}>
+                  <div className=" gap-2 font-semibold">
+                    <p className="text-neutral-800 pt-2 pb-2 text-sm bg-white shadow-2xl rounded-sm">
+                      {cantico.autore}
+                    </p>
+                    {/*<p className="text-neutral-500 text-sm">
+                        {cantico.titolo}
+                      </p>*/}
+                  </div>
+                </Link>
+                {/* </div> */}
+                {/*<Link to={`/cantico/${cantico.id}`}>
                   <span className="flex justify-between items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +230,7 @@ export default function ListaCantici() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="size-6"
+                      className="size-4"
                     >
                       <path
                         strokeLinecap="round"
@@ -223,7 +239,7 @@ export default function ListaCantici() {
                       />
                     </svg>
                   </span>
-                </Link>
+                </Link>*/}
               </li>
             ))}
           </ul>
