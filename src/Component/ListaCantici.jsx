@@ -128,9 +128,9 @@ export default function ListaCantici() {
 
   return (
     <div className="flex flex-col min-h-screen mb-18">
-      <div className="flex-grow p-2 bg-lime-950/15">
+      <div className="flex-grow p-2 bg-slate-800">
         <div className="p-2 text-lg mb-2 text-center items-center flex justify-center">
-          <h1 className="text-xl text-center font-extrabold text-neutral-700 p-4">
+          <h1 className="text-xl text-center font-bold text-white p-4">
             Lista Cantici
           </h1>
 
@@ -188,12 +188,9 @@ export default function ListaCantici() {
         </div>
 
         <div>
-          <ul role="list" className=" rounded-lg p-2 grid grid-cols-5">
+          <ul role="list" className=" rounded-lg grid grid-cols-5">
             {sortedCantici.map((cantico) => (
-              <li
-                key={cantico.id}
-                className=" gap-x-6 py-3 p-1 text-neutral-500 text-center"
-              >
+              <li key={cantico.id} className="p-2 text-neutral-500 text-center">
                 {/* <div className="grid grid-cols-3"> */}
                 {/* Icona del cuore per aggiungere ai preferiti */}
 
@@ -212,8 +209,8 @@ export default function ListaCantici() {
                   </svg>*/}
 
                 <Link to={`/cantico/${cantico.id}`}>
-                  <div className=" gap-2 font-semibold">
-                    <p className="text-neutral-800 pt-2 pb-2 text-sm bg-white shadow-2xl rounded-sm">
+                  <div className="font-semibold">
+                    <p className="text-neutral-800 p-4 text-sm bg-white shadow-2xl rounded-sm">
                       {cantico.autore}
                     </p>
                     {/*<p className="text-neutral-500 text-sm">

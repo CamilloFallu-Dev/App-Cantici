@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
-      <nav className="fixed bottom-0 w-full bg-lime-950/50 p-4 text-md text-amber-50 shadow-2xl flex gap-5 justify-center z-50">
+      <nav className="fixed bottom-0 w-full bg-slate-600 text-slate-100  p-4 text-md shadow-2xl flex gap-5 justify-center z-50">
         <Link
           to="/"
-          className="cursor-pointer focus:text-neutral-800 flex flex-col justify-center items-center text-xs"
+          className="cursor-pointer focus:text-slate-400 flex flex-col justify-center items-center text-xs"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ export default function Navbar() {
 
         <Link
           to="/lista-cantici"
-          className="cursor-pointer focus:text-neutral-800 flex flex-col justify-center items-center text-xs"
+          className="cursor-pointer focus:text-slate-400 flex flex-col justify-center items-center text-xs"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <Link
           to="/raccolta"
-          className="cursor-pointer focus:text-neutral-800 flex flex-col justify-center items-center text-xs"
+          className="cursor-pointer focus:text-slate-400 flex flex-col justify-center items-center text-xs"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

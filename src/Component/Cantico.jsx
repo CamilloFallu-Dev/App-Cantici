@@ -586,20 +586,20 @@ Deh! Tu ciba i nostri cuor.`,
           <p key={rigaIndex}>{riga}</p>
         ))}
         {index < strofe.length - 1 && (
-          <p className="text-left text-neutral-300">-</p>
+          <p className="text-left text-slate-800">-</p>
         )}
       </div>
     ));
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start mb-15">
+    <div className="min-h-screen flex flex-col items-center justify-start mb-15 bg-slate-800">
       <div className="p-6 text-left max-w-4xl w-full mx-auto">
-        <h2 className="text-2xl font-extrabold text-neutral-700 mb-4 text-center">
+        <h2 className="text-2xl font-extrabold text-white mb-4 pl-2">
           {cantico.titolo}
         </h2>
         <div className="mt-6">
-          <div className="p-4 bg-lime-950/25 bg-opacity-80 shadow-lg rounded-xl">
+          <div className="p-2 bg-slate-800 text-white">
             {formatTesto(cantico.testo)}
           </div>
         </div>

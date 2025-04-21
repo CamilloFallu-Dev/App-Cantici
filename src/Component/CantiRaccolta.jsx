@@ -20,7 +20,8 @@ Dio vengo a Te
 il mio cuore lo spando ai tuoi piè
 Togli tutto ciò che mi separa da Te
 
-Coro: Le mie ansie non ti son nascoste
+Coro:
+Le mie ansie non ti son nascoste
 Tu hai cura di Me
 Fiducioso lo sguardo a te volgo
 e mi infondo su Te
@@ -979,22 +980,20 @@ Dal cielo su noi scenderà`,
           <p key={rigaIndex}>{riga}</p>
         ))}
         {index < strofe.length - 1 && (
-          <p className="text-left text-neutral-300">-</p>
+          <p className="text-left text-slate-800">-</p>
         )}
       </div>
     ));
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start">
+    <div className="min-h-screen flex flex-col items-center justify-start bg-slate-800">
       <div className="p-6 text-left max-w-4xl w-full mx-auto mb-50">
-        <h2 className="text-2xl font-extrabold text-neutral-700 mb-4 text-center">
+        <h2 className="text-2xl font-extrabold  text-white mb-4 pl-2">
           {cantico.titolo}
         </h2>
         <div className="mt-6">
-          <div className="p-4 bg-lime-950/25 bg-opacity-80 shadow-lg rounded-xl">
-            {formatTesto(cantico.testo)}
-          </div>
+          <div className="p-2 text-white">{formatTesto(cantico.testo)}</div>
         </div>
       </div>
       {/* <div className="w-full">

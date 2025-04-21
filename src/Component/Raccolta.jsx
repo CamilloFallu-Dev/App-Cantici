@@ -37,27 +37,24 @@ const raccolta = [
 
 export default function Raccolta() {
   return (
-    <div className="bg-lime-950/15 mb-18">
-      <h1 className="text-xl text-center font-extrabold text-neutral-700 p-4">
+    <div className="bg-slate-800 mb-18">
+      <h1 className="text-xl text-center font-extrabold text-white p-4">
         Lista Canti della Raccolta di Licata
       </h1>
-      <ul role="list" className="divide-y divide-neutral-300  rounded-lg p-2">
+      <ul role="list" className="  rounded-lg p-2">
         {raccolta.map((item) => (
           <li
             key={item.id}
-            className="flex justify-between  items-center gap-x-6 py-5 p-1 text-neutral-500"
+            className="flex justify-between  items-center gap-x-6 py-4 p-1 text-white"
           >
             <div className="flex justify-between gap-2">
               <Link
                 to={`/raccolta/${item.id}`}
-                className="text-neutral-800 text-sm"
+                className="text-white/50 text-sm"
               >
                 <p>{item.autore}</p>
               </Link>
-              <Link
-                to={`/raccolta/${item.id}`}
-                className="text-neutral-600 text-sm"
-              >
+              <Link to={`/raccolta/${item.id}`} className="text-white text-sm">
                 <p>{item.titolo}</p>
               </Link>
             </div>
